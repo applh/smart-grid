@@ -309,7 +309,8 @@ PlayCB.check_winner=function(){
    if (PlayCB.curmode == 'battle') {      
       
       //alert("WINNER [" + PlayCB.winner + "]\n"+ PlayCB.cardsX.join());
-      PlayCB.texto = '<div class="msg">WINNER [' + PlayCB.winner + "] "+ PlayCB.cardsX.join() + '</div>';
+      var ts = PlayCB.click1 + PlayCB.click2;
+      PlayCB.texto = '<div class="msg">('+ ts +') WINNER [' + PlayCB.winner + "] "+ PlayCB.cardsX.join() + '</div>';
       
       if (PlayCB.winner == 1) {
          PlayCB.cardsX.reverse();
@@ -332,7 +333,8 @@ PlayCB.message=function() {
       jQuery(".texto1, .texto2")
                 .empty()
                 .html(PlayCB.texto);
-      jQuery(".texto1 .msg, .texto2 .msg").fadeOut( 1000, function(){ PlayCB.curmode='play';alert('...'); } );
+      // FIXME: NOT WORKING with iOS        
+      //jQuery(".texto1 .msg, .texto2 .msg").fadeOut( 1000 );
       PlayCB.curmode='play';
 
 };
