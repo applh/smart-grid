@@ -310,7 +310,7 @@ PlayCB.check_winner=function(){
       
       //alert("WINNER [" + PlayCB.winner + "]\n"+ PlayCB.cardsX.join());
       var ts = PlayCB.click1 + PlayCB.click2;
-      PlayCB.texto = '<div class="msg">('+ ts +') WINNER [' + PlayCB.winner + "] "+ PlayCB.cardsX.join() + '</div>';
+      PlayCB.texto = '#'+ ts +' * WINNER [' + PlayCB.winner + "] "+ PlayCB.cardsX.join() + ' *';
       
       if (PlayCB.winner == 1) {
          PlayCB.cardsX.reverse();
@@ -395,7 +395,7 @@ PlayCB.act_click2=function(){
 
 PlayCB.reset_game=function() {
 
-   PlayCB.texto='BATTLE CARDS by Applh.com (v1.0)';
+   PlayCB.texto='BATTLE CARDS by Applh.com (v1.0.a)';
    PlayCB.message();
 
    PlayCB.shuffle(PlayCB.cards0);
