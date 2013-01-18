@@ -365,7 +365,7 @@ PlayCB.act_click1=function(){
     if (PlayCB.curplay != 1) return;
   
     PlayCB.click1++;
-    jQuery(".player1").html(PlayCB.click1);
+    //jQuery(".player1").html(PlayCB.click1);
 
     if (PlayCB.cards1.length > 0) {
      PlayCB.act_show1();
@@ -396,7 +396,7 @@ PlayCB.act_click2=function(){
     if (PlayCB.curplay != 2) return;
 
     PlayCB.click2++;
-    jQuery(".player2").html(PlayCB.click2);
+    //jQuery(".player2").html(PlayCB.click2);
 
     if (PlayCB.cards2.length > 0) {
      PlayCB.act_show2();
@@ -413,7 +413,10 @@ PlayCB.reset_game=function() {
 
    PlayCB.texto='BATTLE CARDS by Applh.com (v1.0.c)';
    PlayCB.message();
-
+  
+   PlayCB.click1=0;
+   PlayCB.click2=0;
+   
    PlayCB.shuffle(PlayCB.cards0);
    PlayCB.nc1=Math.round(PlayCB.cards0.length / 2);
 
