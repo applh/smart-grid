@@ -5,7 +5,7 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
  
-<title>SMART GRID</title>
+<title>SMART GRID by Applh.com</title>
 <style type="text/css">
   table {
     font-family:monospace;
@@ -272,12 +272,16 @@ PlayCB.check=function(){
    }
    
    if (PlayCB.cards1.length == 0) {
-      alert("PLAYER 2 WINS");
-      PlayCB.reset_game();
+      //alert("PLAYER 2 WINS");
+      PlayCB.texto='* PLAYER 2 WINS * (click to restart)';
+      PlayCB.message();
+      PlayCB.curmode='end';
    }
    if (PlayCB.cards2.length == 0) {
-      alert("PLAYER 1 WINS");
-      PlayCB.reset_game();
+      //alert("PLAYER 1 WINS");
+      PlayCB.texto='* PLAYER 1 WINS * (click to restart)';
+      PlayCB.message();
+      PlayCB.curmode='end';
    }
 };
 
@@ -340,7 +344,11 @@ PlayCB.message=function() {
 
 PlayCB.act_click1=function(){
 
-
+  if (PlayCB.curmode=='end') {
+     PlayCB.reset_game();
+     return;
+  }
+  
   curt=jQuery(this).html()
   if (PlayCB.curmode=='battle') {
     if (curt == "#") {
@@ -366,7 +374,13 @@ PlayCB.act_click1=function(){
     PlayCB.check();
   }
 };
+
 PlayCB.act_click2=function(){
+  if (PlayCB.curmode=='end') {
+     PlayCB.reset_game();
+     return;
+  }
+
   curt=jQuery(this).html()
   if (PlayCB.curmode=='battle') {
     if (curt == "#") {
@@ -394,7 +408,7 @@ PlayCB.act_click2=function(){
 
 PlayCB.reset_game=function() {
 
-   PlayCB.texto='BATTLE CARDS by Applh.com (v1.0.b)';
+   PlayCB.texto='BATTLE CARDS by Applh.com (v1.0.c)';
    PlayCB.message();
 
    PlayCB.shuffle(PlayCB.cards0);
