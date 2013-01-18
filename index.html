@@ -323,7 +323,7 @@ PlayCB.check_winner=function(){
       }     
 
       PlayCB.reset_turn();
-  
+      PlayCB.message();
    }
 };
 
@@ -391,6 +391,9 @@ PlayCB.act_click2=function(){
 };
 
 PlayCB.reset_game=function() {
+
+   PlayCB.texto='BATTLE CARDS';
+   PlayCB.message();
 
    PlayCB.shuffle(PlayCB.cards0);
    PlayCB.nc1=Math.round(PlayCB.cards0.length / 2);
