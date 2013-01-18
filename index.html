@@ -8,135 +8,393 @@
     font-family:monospace;
   }
 </style>
+<script type="text/javascript" src="jquery190min.js"></script>
 </head>
 <body>
-<h1>SMART GRID</h1>
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>12</td>
-        <td>13</td>
-        <td>14</td>
-        <td>15</td>
-        <td>16</td>
-        <td>17</td>
-        <td>18</td>
-        <td>19</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>21</td>
-        <td>22</td>
-        <td>23</td>
-        <td>24</td>
-        <td>25</td>
-        <td>26</td>
-        <td>27</td>
-        <td>28</td>
-        <td>29</td>
-        <td>30</td>
-      </tr>
-      <tr>
-        <td>31</td>
-        <td>32</td>
-        <td>33</td>
-        <td>34</td>
-        <td>35</td>
-        <td>36</td>
-        <td>37</td>
-        <td>38</td>
-        <td>39</td>
-        <td>40</td>
-      </tr>
-      <tr>
-        <td>41</td>
-        <td>42</td>
-        <td>43</td>
-        <td>44</td>
-        <td>45</td>
-        <td>46</td>
-        <td>47</td>
-        <td>48</td>
-        <td>49</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>51</td>
-        <td>52</td>
-        <td>53</td>
-        <td>54</td>
-        <td>55</td>
-        <td>56</td>
-        <td>57</td>
-        <td>58</td>
-        <td>59</td>
-        <td>60</td>
-      </tr>
-      <tr>
-        <td>61</td>
-        <td>62</td>
-        <td>63</td>
-        <td>64</td>
-        <td>65</td>
-        <td>66</td>
-        <td>67</td>
-        <td>68</td>
-        <td>69</td>
-        <td>70</td>
-      </tr>
-      <tr>
-        <td>71</td>
-        <td>72</td>
-        <td>73</td>
-        <td>74</td>
-        <td>75</td>
-        <td>76</td>
-        <td>77</td>
-        <td>78</td>
-        <td>79</td>
-        <td>80</td>
-      </tr>
-      <tr>
-        <td>81</td>
-        <td>82</td>
-        <td>83</td>
-        <td>84</td>
-        <td>85</td>
-        <td>86</td>
-        <td>87</td>
-        <td>88</td>
-        <td>89</td>
-        <td>90</td>
-      </tr>
-      <tr>
-        <td>91</td>
-        <td>92</td>
-        <td>93</td>
-        <td>94</td>
-        <td>95</td>
-        <td>96</td>
-        <td>97</td>
-        <td>98</td>
-        <td>99</td>
-        <td>100</td>
-      </tr>
-    </tbody>
+<div style="font-family:monospace;background-color:#eeeeee;">
+ <div class="player1" style="width:800px;height:80px;background-color:#abcdef;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
+ </div>
+ <div style="width:800px;margin:0 auto;clear:both;">
+  <table class="grid" style="width:700px;margin:10px;float:left;color:#000000;font-size:20px;">
+<tr class="play1">
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+</tr>
+<tr class="play1">
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+</tr>
+<tr class="play1">
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+</tr>
+<tr class="play2">
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+</tr>
+<tr class="play2">
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+</tr>
+<tr class="play2">
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td style="width:60px;height:60px;border:1px red solid;"></td>
+</tr>
   </table>
+  <div style="float:right;padding-top:80px;">
+   <div class="card1" style="width:80px;height:80px;font-size:40px;text-align:center;margin-top:40px;">
+   </div>
+   <div class="card2" style="width:80px;height:80px;font-size:40px;text-align:center;margin-top:40px;">
+   </div>
+  </div>
+ </div>
+ <div class="player2" style="width:800px;height:80px;background-color:#fedcba;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
+ </div>
 </div>
+<script type="text/javascript">
+var PlayCB={};
+PlayCB.cards=[
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+];
+
+PlayCB.shuffle = function(o){ 
+    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+PlayCB.cards0=[
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+'A','2','3','4','5','6','7','8','9','10','J','Q','K',
+];
+
+PlayCB.cardsX=[];
+
+PlayCB.click1=0;
+PlayCB.card1=0;
+PlayCB.card11=0;
+PlayCB.color1='#abcdef';
+
+PlayCB.click2=0;
+PlayCB.card2=0;
+PlayCB.card22=0;
+PlayCB.color2='#fedcba';
+
+PlayCB.curmode='play';
+PlayCB.curplay=1;
+
+PlayCB.act_show1=function() {
+   PlayCB.card11=PlayCB.card1;
+   PlayCB.card1=PlayCB.cards1.pop();
+   jQuery(".player1").html(PlayCB.cards1.join());
+   jQuery('.card1').html(PlayCB.card1);
+};
+PlayCB.act_show2=function() {
+   PlayCB.card22=PlayCB.card2;
+   PlayCB.card2=PlayCB.cards2.pop();
+   jQuery(".player2").html(PlayCB.cards2.join());
+   jQuery('.card2').html(PlayCB.card2);
+};
+
+PlayCB.check_fight=function() {
+   res = false;
+   curXl=PlayCB.cardsX.length;   
+   if (curXl >1) {
+      res = (PlayCB.cardsX[curXl-1] == PlayCB.cardsX[curXl-2]);
+   }
+   if (!res) {
+      if (curXl >2) {
+         res = (PlayCB.cardsX[curXl-1] == PlayCB.cardsX[curXl-3]);
+      }
+   }
+   return res;
+}
+
+PlayCB.start_chain=0;
+PlayCB.start_card='';
+PlayCB.end_turn=false;
+
+PlayCB.change_player=function() {
+   PlayCB.end_turn=false;
+   
+   res = false;
+   curXl=PlayCB.cardsX.length;   
+   
+   if (!res) {
+      if (curXl >0) {
+         lastX = PlayCB.cardsX[curXl-1];
+         res = (lastX == 'J') 
+               || (lastX == 'Q') 
+               || (lastX == 'K') 
+               || (lastX == 'A');
+               
+         if (res) { 
+            PlayCB.start_chain=curXl;
+            PlayCB.start_card=lastX;
+         }
+      }
+   }
+   
+   if (curXl == 1) res=true;
+   
+   if (!res) {
+      if (curXl >1) {
+         if (PlayCB.cardsX[curXl-2] == 'J') {
+            PlayCB.end_turn=true;
+            res = true; 
+         }
+      }
+   }
+
+   if (!res) {
+      if (curXl >2) {
+         var deltaX=curXl - PlayCB.start_chain;
+
+         if ((deltaX > 1) && (PlayCB.start_card == 'Q')) {
+            PlayCB.end_turn=true;
+            res = true;          
+         }
+         if ((deltaX > 2) && (PlayCB.start_card == 'K')) {
+            PlayCB.end_turn=true;
+            res = true;          
+         }
+         if ((deltaX > 3) && (PlayCB.start_card == 'A')) {
+            PlayCB.end_turn=true;
+            res = true;          
+         }
+
+      }
+   }
+   return res;
+}
+
+PlayCB.check=function(){
+
+   is_fight=PlayCB.check_fight();
+
+   if (is_fight) {
+      PlayCB.curmode='battle';
+      PlayCB.winner=0;
+      
+      PlayCB.target1=Math.round(30 * Math.random());
+      PlayCB.target2=Math.round(30 * Math.random()) + 30;
+      jQuery(".grid td:eq("+PlayCB.target1+")")
+         .html("#")
+         .css("background-color", "#00ff00"); 
+      jQuery(".grid td:eq("+PlayCB.target2+")")
+         .html("#")
+         .css("background-color", "#00ff00"); 
+   }
+   else {
+      var change_turn=PlayCB.change_player();
+      if (PlayCB.end_turn) {
+         PlayCB.curmode='battle';
+         if (PlayCB.curplay == 1) {
+            PlayCB.winner = 2;
+         }
+         else if (PlayCB.curplay == 2) {
+            PlayCB.winner = 2;
+         }
+         PlayCB.check_winner();
+      }
+      else if (change_turn || (PlayCB.start_chain == 0)) {
+         if (PlayCB.curplay == 1) {
+            PlayCB.curplay = 2;
+         }
+         else if (PlayCB.curplay == 2) {
+            PlayCB.curplay = 1;
+         }
+      }
+
+   }
+   
+   if (PlayCB.cards1.length == 0) {
+      alert("PLAYER 2 WINS");
+      PlayCB.reset_game();
+   }
+   if (PlayCB.cards2.length == 0) {
+      alert("PLAYER 1 WINS");
+      PlayCB.reset_game();
+   }
+};
+
+
+PlayCB.reset_turn=function(){
+      PlayCB.start_chain=0;
+      PlayCB.start_card='';
+      PlayCB.cardsX=[];
+      // RESET GRID
+      jQuery(".grid td")
+         .empty()
+         .css("background-color", "#eeeeee");
+              
+      PlayCB.card1='';
+      PlayCB.card11='';
+      jQuery(".player1").html(PlayCB.cards1.join());
+      jQuery('.card1').html(PlayCB.card1);
+
+      PlayCB.card2='';
+      PlayCB.card22='';
+      jQuery(".player2").html(PlayCB.cards2.join());
+      jQuery('.card2').html(PlayCB.card2);
+        
+};
+
+PlayCB.check_winner=function(){
+   if (PlayCB.curmode == 'battle') {      
+      
+      alert("WINNER [" + PlayCB.winner + "]\n"+ PlayCB.cardsX.join());
+
+      if (PlayCB.winner == 1) {
+         PlayCB.cardsX.reverse();
+         PlayCB.cards1=PlayCB.cardsX.concat(PlayCB.cards1);
+         PlayCB.curplay=1;
+      }
+      else if (PlayCB.winner == 2) {
+         PlayCB.cardsX.reverse();
+         PlayCB.cards2=PlayCB.cardsX.concat(PlayCB.cards2);
+         PlayCB.curplay=2;
+      }     
+
+      PlayCB.reset_turn();
+      PlayCB.curmode='play';
+ 
+   }
+};
+
+PlayCB.act_click1=function(){
+
+
+  curt=jQuery(this).html()
+  if (PlayCB.curmode=='battle') {
+    if (curt == "#") {
+       PlayCB.winner=1;
+       PlayCB.check_winner();
+    }
+  }
+  
+  if (PlayCB.curmode=='play') {
+    if (curt != "") return;
+    if (PlayCB.curplay != 1) return;
+  
+    PlayCB.click1++;
+    jQuery(".player1").html(PlayCB.click1);
+
+    if (PlayCB.cards1.length > 0) {
+     PlayCB.act_show1();
+     jQuery(this)
+        .html(PlayCB.card1)
+        .css("background-color", PlayCB.color1);
+     PlayCB.cardsX.push(PlayCB.card1);
+    }
+    PlayCB.check();
+  }
+};
+PlayCB.act_click2=function(){
+  curt=jQuery(this).html()
+  if (PlayCB.curmode=='battle') {
+    if (curt == "#") {
+       PlayCB.winner=2;
+       PlayCB.check_winner();
+    }
+  }
+  if (PlayCB.curmode=='play') {
+    if (curt != "") return;
+    if (PlayCB.curplay != 2) return;
+
+    PlayCB.click2++;
+    jQuery(".player2").html(PlayCB.click2);
+
+    if (PlayCB.cards2.length > 0) {
+     PlayCB.act_show2();
+     jQuery(this)
+        .html(PlayCB.card2)
+        .css("background-color", PlayCB.color2);
+     PlayCB.cardsX.push(PlayCB.card2);
+    }
+    PlayCB.check();
+  }
+};
+
+PlayCB.reset_game=function() {
+
+   PlayCB.shuffle(PlayCB.cards0);
+   PlayCB.nc1=Math.round(PlayCB.cards0.length / 2);
+
+   PlayCB.cards1=PlayCB.cards0.slice(0, PlayCB.nc1);
+   PlayCB.cards2=PlayCB.cards0.slice(PlayCB.nc1);
+
+   jQuery(".player1").html(PlayCB.cards1.join());
+   jQuery(".player2").html(PlayCB.cards2.join());
+
+   PlayCB.start_card='';
+   PlayCB.start_chain=0;
+   PlayCB.curplay=1;
+   PlayCB.curmode='play';
+
+};
+
+PlayCB.init=function() {
+   PlayCB.reset_game();
+   
+   jQuery(".play1 td").click(PlayCB.act_click1);
+   jQuery(".play2 td").click(PlayCB.act_click2);
+};
+
+jQuery(PlayCB.init);
+
+</script>
   
 </body>
 </html>
