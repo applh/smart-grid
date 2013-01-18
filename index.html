@@ -242,8 +242,8 @@ PlayCB.check=function(){
       PlayCB.curmode='battle';
       PlayCB.winner=0;
       
-      PlayCB.target1=Math.round(30 * Math.random());
-      PlayCB.target2=Math.round(30 * Math.random()) + 30;
+      PlayCB.target1=Math.floor(30 * Math.random());
+      PlayCB.target2=Math.floor(30 * Math.random()) + 30;
       jQuery(".grid td:eq("+PlayCB.target1+")")
          .html("#")
          .css("background-color", "#00ff00"); 
