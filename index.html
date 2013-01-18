@@ -332,7 +332,8 @@ PlayCB.message=function() {
       jQuery(".texto1, .texto2")
                 .empty()
                 .html(PlayCB.texto);
-      jQuery(".texto1 .msg, .texto2 .msg").fadeOut( 'slow', function(){ PlayCB.curmode='play'; } );
+      jQuery(".texto1 .msg, .texto2 .msg").fadeOut( 1000, function(){ PlayCB.curmode='play';alert('...'); } );
+      PlayCB.curmode='play';
 
 };
 
