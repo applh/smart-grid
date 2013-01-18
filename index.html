@@ -323,16 +323,17 @@ PlayCB.check_winner=function(){
       }     
 
       PlayCB.reset_turn();
-      PlayCB.curmode='wait';
-      jQuery(".texto1, .texto2").html(PlayCB.texto);
-      jQuery(".texto1 .msg, .texto2 .msg").fadeOut( 'slow', 
-                                                    function(){ 
-                                                        PlayCB.curmode='play'; 
-                                                        jQuery(".texto1, .texto2").empty();
-                                                    } 
-                                                );
   
    }
+};
+
+PlayCB.message=function() {
+      PlayCB.curmode='wait';
+      jQuery(".texto1, .texto2")
+                .empty()
+                .html(PlayCB.texto);
+      jQuery(".texto1 .msg, .texto2 .msg").fadeOut( 'slow', function(){ PlayCB.curmode='play'; } );
+
 };
 
 PlayCB.act_click1=function(){
