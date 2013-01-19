@@ -8,109 +8,154 @@
  
 <title>SMART GRID by Applh.com</title>
 <style type="text/css">
-  table {
-    font-family:monospace;
-  }
+body {
+background-color:#012345;
+font-family:monospace;
+padding:0px;
+margin:0px;
+}
+table {
+border-collapse:separate;
+border-spacing:5px;
+font-size:40px;
+}
+.grid td {
+width:50px;
+height:50px;
+padding:5px;
+border:1px #ffffff solid;
+border-radius:10px;
+}
+tr.play1 td {
+border:1px #00ffff solid;
+}
+tr.play2 td {
+border:1px #ffff00 solid;
+}
+.player1 {
+text-align:center;
+}
+.player2 {
+text-align:center;
+}
+.card1 {
+   color:#ffffff;
+}
+.card2 {
+   color:#ffffff;
+}
+.menu1 {
+color:#eeeeee;
+text-align:center;
+}
 </style>
 <script type="text/javascript" src="jquery190min.js"></script>
 </head>
 <body>
-<div style="font-family:monospace;background-color:#eeeeee;">
+<div style="font-family:monospace;background-color:#012345;">
 
-<div class="player1" style="width:800px;height:80px;background-color:#abcdef;margin:0 auto;color:#123456;font-size:8px;clear:both;padding:10px;">
+<div class="player1" style="width:900px;height:40px;background:url(cards_blue_120.png) no-repeat scroll 5px 5px #00AAFF;margin:0 auto;color:#123456;font-size:8px;clear:both;padding:10px;">
  </div>
-<div class="texto1" style="width:800px;height:40px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
+<div class="texto1" style="width:900px;height:25px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
  </div>
 
-<div style="width:800px;margin:0 auto;clear:both;">
-  <table class="grid" style="width:700px;margin:10px;float:left;color:#000000;font-size:20px;">
+<div style="width:900px;margin:0 auto;clear:both;">
+  <table class="grid" style="width:700px;margin:5px;float:left;color:#012345;">
  <tbody>
 <tr class="play1">
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
 </tr>
 <tr class="play1">
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
 </tr>
 <tr class="play1">
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
 </tr>
 <tr class="play2">
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
 </tr>
 <tr class="play2">
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
 </tr>
 <tr class="play2">
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
- <td style="width:60px;height:60px;border:1px red solid;"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
 </tr>
  </tbody>
   </table>
-  <div style="float:right;padding-top:80px;">
-   <div class="card1" style="width:80px;height:80px;font-size:40px;text-align:center;margin-top:40px;">
+  <div style="float:right;padding-top:10px;padding-right:10px;overflow:hidden;height:400px;">
+   <div class="menu" style="width:160px;height:50px;font-size:16px;text-align:center;margin-top:0px;">
+   <span class="menu1">MENU</span>
    </div>
-   <div class="card2" style="width:80px;height:80px;font-size:40px;text-align:center;margin-top:40px;">
+   <div class="menu2" style="display:none;width:140px;height:80px;font-size:16px;text-align:center;margin-top:0px;">
+    <hr/>
+    <div class="act_restart">RESTART GAME</div> 
+    <hr/>
+   </div>
+   <div class="card1" style="width:160px;height:120px;font-size:100px;text-align:center;margin-top:30px;">
+   </div>
+   <div class="card2" style="width:160px;height:120px;font-size:100px;text-align:center;margin-top:30px;">
    </div>
   </div>
  </div>
 
- <div class="texto2" style="width:800px;height:40px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
+ <div class="texto2" style="width:900px;height:25px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
  </div>
  
- <div class="player2" style="width:800px;height:80px;background-color:#fedcba;margin:0 auto;color:#123456;font-size:8px;clear:both;padding:10px;">
+ <div class="player2" style="width:900px;height:40px;background:url(cards_red_120.png) no-repeat scroll 5px 5px #FFAA00;margin:0 auto;color:#123456;font-size:8px;clear:both;padding:10px;">
  </div>
         
 </div>
@@ -139,12 +184,12 @@ PlayCB.cardsX=[];
 PlayCB.click1=0;
 PlayCB.card1=0;
 PlayCB.card11=0;
-PlayCB.color1='#abcdef';
+PlayCB.color1='#00aaff';
 
 PlayCB.click2=0;
 PlayCB.card2=0;
 PlayCB.card22=0;
-PlayCB.color2='#fedcba';
+PlayCB.color2='#ffaa00';
 
 PlayCB.curmode='play';
 PlayCB.curplay=1;
@@ -234,6 +279,10 @@ PlayCB.change_player=function() {
    return res;
 }
 
+
+PlayCB.fstart=0;
+PlayCB.fend=0;
+
 PlayCB.check=function(){
 
    is_fight=PlayCB.check_fight();
@@ -250,6 +299,9 @@ PlayCB.check=function(){
       jQuery(".grid td:eq("+PlayCB.target2+")")
          .html("#")
          .css("background-color", "#00ff00"); 
+
+      var d = new Date();
+      PlayCB.fstart = d.getTime();
    }
    else {
       var change_turn=PlayCB.change_player();
@@ -312,11 +364,22 @@ PlayCB.reset_turn=function(){
 
 PlayCB.texto='';
 PlayCB.check_winner=function(){
-   if (PlayCB.curmode == 'battle') {      
+   if (PlayCB.curmode == 'battle') {
       
+      var textdelay = '';
+      if (PlayCB.fstart > 0) {
+         var d = new Date();
+         PlayCB.fend = d.getTime();
+         var fdelay = PlayCB.fend - PlayCB.fstart;
+         textdelay = ' * ' + fdelay + 'ms';
+
+         PlayCB.fstart = 0;
+         PlayCB.fend = 0;
+      }
+
       //alert("WINNER [" + PlayCB.winner + "]\n"+ PlayCB.cardsX.join());
       var ts = PlayCB.click1 + PlayCB.click2;
-      PlayCB.texto = '#'+ ts +' * Player ' + PlayCB.winner + " WINS "+ PlayCB.cardsX.join() + '';
+      PlayCB.texto = '#'+ ts + textdelay + ' * Player ' + PlayCB.winner + " WINS "+ PlayCB.cardsX.join() + '';
       
       if (PlayCB.winner == 1) {
          PlayCB.cardsX.reverse();
@@ -425,16 +488,26 @@ PlayCB.reset_game=function() {
 
    PlayCB.reset_turn();
 
+   jQuery(".menu2").hide();
+
    PlayCB.curplay=1;
    PlayCB.curmode='play';
 
 };
 
+PlayCB.act_menu1=function() {
+   jQuery(".menu2").toggle();
+}
+PlayCB.act_restart=function() {
+   PlayCB.reset_game();
+}
 PlayCB.init=function() {
    PlayCB.reset_game();
    
    jQuery(".play1 td").click(PlayCB.act_click1);
    jQuery(".play2 td").click(PlayCB.act_click2);
+   jQuery(".menu1").click(PlayCB.act_menu1);
+   jQuery(".act_restart").click(PlayCB.act_restart);
 };
 
 jQuery(PlayCB.init);
