@@ -68,10 +68,10 @@ margin-bottom:0px;
 margin-bottom:0px;
 }
 .player1 .cards {
-background-color:#123456;
+background-color:#00FFFF;
 padding:10px;
 color:transparent;
-border:1px solid #00FFFF;
+border:1px solid #123456;
 border-radius:10px;
 margin-top:10px;
 margin-bottom:0px;
@@ -79,10 +79,10 @@ margin-bottom:0px;
 
 
 .player2 .cards {
-background-color:#654321;
+background-color:#FFFF00;
 padding:10px;
 color:transparent;
-border:1px solid #FFFF00;
+border:1px solid #654321;
 border-radius:10px;
 margin-top:10px;
 margin-bottom:0px;
@@ -589,9 +589,10 @@ PlayCB.act_click2=function(){
   }
 };
 
+PlayCB.winner=null;
 PlayCB.reset_game=function() {
 
-   PlayCB.texto='* BATTLE CARDS / v1.2.4 / by Applh.com *';
+   PlayCB.texto='* BATTLE CARDS / v1.2.5 / by Applh.com *';
    PlayCB.message();
   
    PlayCB.click1=0;
@@ -607,7 +608,17 @@ PlayCB.reset_game=function() {
 
    jQuery(".menu2").hide();
    jQuery(".card-on").html("");
-   jQuery('.card-on:last').html('*1*').detach().insertBefore('.card-on:first');
+
+   if (PlayCB.winner) {
+      jQuery('.card-on:last').html('WINS').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('*'+PlayCB.winner+'*').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('PLAYER').detach().insertBefore('.card-on:first');
+   }
+   else {
+      jQuery('.card-on:last').html('CARDS').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('BATTLE').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('*1*').detach().insertBefore('.card-on:first');
+   }
 
    PlayCB.curplay=1;
    PlayCB.curmode='play';
@@ -618,6 +629,7 @@ PlayCB.act_menu1=function() {
    jQuery(".menu2").toggle();
 }
 PlayCB.act_restart=function() {
+   PlayCB.winner = null;
    PlayCB.reset_game();
 }
 
