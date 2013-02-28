@@ -15,8 +15,6 @@ Smart Card Grid will offer several games. // Battle Cards Challenge (2 players) 
 
    <preference name="permissions" value="none"/>
 
-    <feature name="http://api.phonegap.com/1.0/device" />
-
     <preference name="phonegap-version" value="2.2.0" />
     <preference name="orientation"      value="landscape" />
     <preference name="target-device"    value="tablet" />
