@@ -475,8 +475,14 @@ PlayCB.reset_turn=function(){
       PlayCB.card22='';
       jQuery(".player2 .cards").html(PlayCB.cards2.join());
 //      jQuery('.card2').html(PlayCB.card2);
-        
-   jQuery('.card-on:last').html('*'+PlayCB.winner+'*').detach().insertBefore('.card-on:first');
+   if (PlayCB.winner == 1) {     
+    jQuery('.card-on:last').html('<span style="color:#00FFFF;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+   }
+   else if (PlayCB.winner == 2) {     
+    jQuery('.card-on:last').html('<span style="color:#FFFF00;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+   }
+
+
 };
 
 PlayCB.texto='';
@@ -611,13 +617,20 @@ PlayCB.reset_game=function() {
 
    if (PlayCB.winner) {
       jQuery('.card-on:last').html('WINS').detach().insertBefore('.card-on:first');
-      jQuery('.card-on:last').html('*'+PlayCB.winner+'*').detach().insertBefore('.card-on:first');
+
+      if (PlayCB.winner == 1) {     
+         jQuery('.card-on:last').html('<span style="color:#00FFFF;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+      }
+      else if (PlayCB.winner == 2) {     
+         jQuery('.card-on:last').html('<span style="color:#FFFF00;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+      }
+
       jQuery('.card-on:last').html('PLAYER').detach().insertBefore('.card-on:first');
    }
    else {
       jQuery('.card-on:last').html('CARDS').detach().insertBefore('.card-on:first');
       jQuery('.card-on:last').html('BATTLE').detach().insertBefore('.card-on:first');
-      jQuery('.card-on:last').html('*1*').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('<span style="color:#00FFFF;">*1*</span>').detach().insertBefore('.card-on:first');
    }
 
    PlayCB.curplay=1;
