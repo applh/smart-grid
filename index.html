@@ -51,20 +51,79 @@ text-align:center;
 .menu2 {
 color:#eeeeee;
 text-align:center;
+margin-bottom:40px;
 }
+
+.player1 .cards {
+background-color:#123456;
+padding:10px;
+color:transparent
+border:1px solid #00FFFF;
+border-radius:10px;
+margin-top:10px;
+}
+
+.player2 .cards {
+background-color:#654321;
+padding:10px;
+color:transparent;
+border:1px solid #FFFF00;
+border-radius:10px;
+margin-top:10px;
+}
+
+.card-on {
+margin:0 auto;
+font-size:50px;
+text-align:center;
+margin-top:0px;
+padding:2px;
+color:#FFFFFF;
+}
+.card-on1 {
+border:1px solid #00FFFF;
+width:70px;
+height:70px;
+border-radius:10px;
+margin:0 auto;
+color:#FFFFFF;
+}
+.card-on2 {
+border:1px solid #FFFF00;
+width:70px;
+height:70px;
+margin:0 auto;
+border-radius:10px;
+color:#FFFFFF;
+}
+
+.player1 .show {
+color:#000000;
+}
+.player2 .show {
+color:#000000;
+}
+
+
 </style>
-<script type="text/javascript" src="jquery190min.js"></script>
+<script type="text/javascript" src="jquery191.js"></script>
 </head>
 <body>
+<div style="width:960px;margin:0 auto;clear:both;">
 <div style="font-family:monospace;background-color:#012345;">
-
-<div class="player1" style="width:900px;height:40px;background:url(cards_blue_120.png) no-repeat scroll 5px 5px #00AAFF;margin:0 auto;color:#123456;font-size:8px;clear:both;padding:10px;">
+<div style="width:960px;min-height:40px;color:#123456;font-size:8px;clear:both;padding:10px 10px 0 10px;background-color:#00AAFF;"> 
+ <div class="player1" style="background:url(cards_blue_120.png) no-repeat scroll left 5px #00AAFF;margin:0 auto;min-height:60px;">
+  <p><span class="cards"></span></p>
  </div>
-<div class="texto1" style="width:900px;height:25px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
+</div>     
+<div class="texto1" style="width:960px;height:25px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;border-bottom-right-radius:40px;">
  </div>
 
-<div style="width:900px;margin:0 auto;clear:both;">
-  <table class="grid" style="width:700px;margin:5px;float:left;color:#012345;">
+<table style="width:100%;">
+ <tbody>
+<tr>
+ <td>
+  <table class="grid" style="width:350px;margin:5px;float:left;color:#012345;">
  <tbody>
 <tr class="play1">
  <td></td>
@@ -72,6 +131,8 @@ text-align:center;
  <td></td>
  <td></td>
  <td></td>
+</tr>
+<tr class="play1">
  <td></td>
  <td></td>
  <td></td>
@@ -84,6 +145,8 @@ text-align:center;
  <td></td>
  <td></td>
  <td></td>
+</tr>
+<tr class="play1">
  <td></td>
  <td></td>
  <td></td>
@@ -96,72 +159,101 @@ text-align:center;
  <td></td>
  <td></td>
  <td></td>
+</tr>
+<tr class="play1">
  <td></td>
  <td></td>
  <td></td>
  <td></td>
  <td></td>
 </tr>
-<tr class="play2">
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
-</tr>
-<tr class="play2">
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
-</tr>
-<tr class="play2">
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
- <td></td>
-</tr>
- </tbody>
-  </table>
-  <div style="float:right;padding-top:10px;padding-right:10px;overflow:hidden;height:400px;">
-   <div class="menu" style="width:160px;height:50px;font-size:16px;text-align:center;margin-top:0px;">
+  </tbody>
+</table>
+ </td>
+ <td>
+ <div style="padding-top:10px;padding-right:10px;overflow:hidden;height:400px;min-width:225px;border:1px solid #22ff22;border-radius:20px;margin:0 auto;">
+   <div class="menu" style="height:50px;font-size:16px;text-align:center;margin-top:0px;">
    <span class="menu1">MENU</span>
    </div>
-   <div class="menu2" style="display:none;width:140px;height:80px;font-size:16px;text-align:center;margin-top:0px;">
+   <div class="menu2" style="display:none;height:60px;font-size:16px;text-align:center;margin-top:0px;">
     <hr/>
     <div class="act_restart">RESTART GAME</div> 
     <hr/>
+    <div class="act_toggle_cards">Show/Hide Cards</div> 
+    <hr/>
    </div>
-   <div class="card1" style="width:160px;height:120px;font-size:100px;text-align:center;margin-top:30px;">
+   <div class="card1 card-on" style="">
    </div>
-   <div class="card2" style="width:160px;height:120px;font-size:100px;text-align:center;margin-top:30px;">
+   <div class="card2 card-on" style="">
    </div>
-  </div>
+   <div class="card3 card-on" style="">
+   </div>
+   <div class="card4 card-on" style="">
+   </div>
+   <div class="card5 card-on" style="">
+   </div>
+    </div>
  </div>
+ </td>
+ <td>
+<table class="grid" style="width:350px;margin:5px;float:right;color:#012345;">
+ <tbody>
+<tr class="play2">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr class="play2">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr class="play2">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr class="play2">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr class="play2">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr class="play2">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+  </tbody>
+  </table>
+  </td>
+</tr>
+ </tbody>
+</table>
 
- <div class="texto2" style="width:900px;height:25px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;">
+ <div class="texto2" style="width:960px;height:25px;background-color:#dddddd;margin:0 auto;color:#123456;font-size:20px;clear:both;padding:10px;text-align:right;;border-top-left-radius:40px;">
  </div>
- 
- <div class="player2" style="width:900px;height:40px;background:url(cards_red_120.png) no-repeat scroll 5px 5px #FFAA00;margin:0 auto;color:#123456;font-size:8px;clear:both;padding:10px;">
+<div style="width:960px;min-height:40px;color:#123456;font-size:8px;clear:both;padding:10px 10px 0 10px;background-color:#FFAA00;"> 
+ <div class="player2" style="background:url(cards_red_120.png) no-repeat scroll right 5px #FFAA00;margin:0 auto;min-height:60px;">
+  <p><span class="cards"></span></p>
  </div>
-        
+</div>        
 </div>
 <script type="text/javascript">
 var PlayCB={};
@@ -201,14 +293,16 @@ PlayCB.curplay=1;
 PlayCB.act_show1=function() {
    PlayCB.card11=PlayCB.card1;
    PlayCB.card1=PlayCB.cards1.pop();
-   jQuery(".player1").html(PlayCB.cards1.join());
-   jQuery('.card1').html(PlayCB.card1);
+   jQuery(".player1 .cards").html(PlayCB.cards1.join());
+ //  jQuery('.card1').html(PlayCB.card1);
+   jQuery('.card-on:last').html('<div class="card-on1">'+PlayCB.card1+'</div>').detach().insertBefore('.card-on:first');
 };
 PlayCB.act_show2=function() {
    PlayCB.card22=PlayCB.card2;
    PlayCB.card2=PlayCB.cards2.pop();
-   jQuery(".player2").html(PlayCB.cards2.join());
-   jQuery('.card2').html(PlayCB.card2);
+   jQuery(".player2 .cards").html(PlayCB.cards2.join());
+//   jQuery('.card2').html(PlayCB.card2);
+   jQuery('.card-on:last').html('<div class="card-on2">'+PlayCB.card2+'</div>').detach().insertBefore('.card-on:first');
 };
 
 PlayCB.check_fight=function() {
@@ -356,14 +450,15 @@ PlayCB.reset_turn=function(){
               
       PlayCB.card1='';
       PlayCB.card11='';
-      jQuery(".player1").html(PlayCB.cards1.join());
-      jQuery('.card1').html(PlayCB.card1);
+      jQuery(".player1 .cards").html(PlayCB.cards1.join());
+//      jQuery('.card1').html(PlayCB.card1);
 
       PlayCB.card2='';
       PlayCB.card22='';
-      jQuery(".player2").html(PlayCB.cards2.join());
-      jQuery('.card2').html(PlayCB.card2);
+      jQuery(".player2 .cards").html(PlayCB.cards2.join());
+//      jQuery('.card2').html(PlayCB.card2);
         
+   jQuery('.card-on:last').html('*'+PlayCB.winner+'*').detach().insertBefore('.card-on:first');
 };
 
 PlayCB.texto='';
@@ -478,7 +573,7 @@ PlayCB.act_click2=function(){
 
 PlayCB.reset_game=function() {
 
-   PlayCB.texto='BATTLE CARDS by Applh.com (v1.1)';
+   PlayCB.texto='BATTLE CARDS by Applh.com (v1.2)';
    PlayCB.message();
   
    PlayCB.click1=0;
@@ -493,6 +588,8 @@ PlayCB.reset_game=function() {
    PlayCB.reset_turn();
 
    jQuery(".menu2").hide();
+   jQuery(".card-on").html("");
+   jQuery('.card-on:last').html('*1*').detach().insertBefore('.card-on:first');
 
    PlayCB.curplay=1;
    PlayCB.curmode='play';
@@ -505,6 +602,11 @@ PlayCB.act_menu1=function() {
 PlayCB.act_restart=function() {
    PlayCB.reset_game();
 }
+
+PlayCB.act_toggle_cards=function(){
+   jQuery(".player1 .cards, .player2 .cards").toggleClass("show");
+}
+
 PlayCB.init=function() {
    PlayCB.reset_game();
    
@@ -512,6 +614,7 @@ PlayCB.init=function() {
    jQuery(".play2 td").click(PlayCB.act_click2);
    jQuery(".menu1").click(PlayCB.act_menu1);
    jQuery(".act_restart").click(PlayCB.act_restart);
+   jQuery(".act_toggle_cards").click(PlayCB.act_toggle_cards);
 };
 
 jQuery(PlayCB.init);
