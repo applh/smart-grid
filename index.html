@@ -20,7 +20,6 @@ height:100%;
 }
 body.applh .page {
 margin:0px auto;
-max-width:990px;
 overflow:hidden;
 margin:0 auto;
 background:none transparent;
@@ -150,8 +149,8 @@ color:#000000;
 </head>
 <body class="applh">
 <div class="page" data-role="page">
- <div style="margin:0 auto;clear:both;">
-  <div style="font-family:monospace;background-color:#012345;">
+ <div class="container" style="clear:both;">
+  <div class="gameboard" style="margin:0 auto;max-width:990px;font-family:monospace;background-color:transparent;">
 <div style="clear:both;padding:0;"> 
  <div class="player1" style="background:url(cards_blue_120.png) no-repeat scroll center 5px #00AAFF;margin:0 auto;min-height:60px;">
  </div>
@@ -169,7 +168,7 @@ color:#000000;
  <tbody>
 <tr>
  <td>
-  <table class="grid" style="width:300px;margin:5px;float:left;color:#012345;">
+  <table class="grid grid1" style="width:300px;margin:5px;float:left;color:#012345;">
  <tbody>
 <tr class="play1">
  <td></td>
@@ -248,7 +247,7 @@ color:#000000;
  </div>
  </td>
  <td>
-<table class="grid" style="width:300px;margin:5px;float:right;color:#012345;">
+<table class="grid grid2" style="width:300px;margin:5px;float:right;color:#012345;">
  <tbody>
 <tr class="play2">
  <td></td>
@@ -440,12 +439,12 @@ PlayCB.check=function(){
       PlayCB.curmode='battle';
       PlayCB.winner=0;
       
-      PlayCB.target1=Math.floor(30 * Math.random());
-      PlayCB.target2=Math.floor(30 * Math.random()) + 30;
-      jQuery(".grid td:eq("+PlayCB.target1+")")
+      PlayCB.target1=Math.floor(28 * Math.random());
+      PlayCB.target2=Math.floor(28 * Math.random());
+      jQuery(".grid1 td:eq("+PlayCB.target1+")")
          .html("#")
          .css("background-color", "#00ff00"); 
-      jQuery(".grid td:eq("+PlayCB.target2+")")
+      jQuery(".grid2 td:eq("+PlayCB.target2+")")
          .html("#")
          .css("background-color", "#00ff00"); 
 
