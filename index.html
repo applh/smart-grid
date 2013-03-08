@@ -6,7 +6,10 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-height, target-densitydpi=device-dpi" />
  
-<title>SMART GRID by Applh.com (v1.2)</title>
+<title>SMART GRID by Applh.com (v1.4)</title>
+
+   <link rel="stylesheet" href="jquery-mobile.css">
+
 <style type="text/css">
 body {
 background:url(applh-logo.png) no-repeat fixed left bottom #012345;
@@ -123,10 +126,13 @@ color:#000000;
 
 
 </style>
-<script type="text/javascript" src="jquery191.js"></script>
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="jquery-mobile.js"></script>
+
 </head>
 <body>
-<div class="page">
+<div class="page" data-role="page">
 <div style="width:960px;margin:0 auto;clear:both;">
 <div style="font-family:monospace;background-color:#012345;">
 <div style="width:960px;min-height:40px;color:#123456;font-size:8px;clear:both;padding:10px 10px 0 10px;background-color:#00AAFF;"> 
@@ -639,7 +645,7 @@ PlayCB.reset_game=function() {
 };
 
 PlayCB.act_menu1=function() {
-   jQuery(".menu2").toggle();
+   jQuery(".menu2").slideToggle("slow");
 }
 PlayCB.act_restart=function() {
    PlayCB.winner = null;
@@ -653,11 +659,11 @@ PlayCB.act_toggle_cards=function(){
 PlayCB.init=function() {
    PlayCB.reset_game();
    
-   jQuery(".play1 td").click(PlayCB.act_click1);
-   jQuery(".play2 td").click(PlayCB.act_click2);
-   jQuery(".menu1").click(PlayCB.act_menu1);
-   jQuery(".act_restart").click(PlayCB.act_restart);
-   jQuery(".act_toggle_cards").click(PlayCB.act_toggle_cards);
+   jQuery(".play1 td").tap(PlayCB.act_click1);
+   jQuery(".play2 td").tap(PlayCB.act_click2);
+   jQuery(".menu1").tap(PlayCB.act_menu1);
+   jQuery(".act_restart").tap(PlayCB.act_restart);
+   jQuery(".act_toggle_cards").tap(PlayCB.act_toggle_cards);
 };
 
 jQuery(PlayCB.init);

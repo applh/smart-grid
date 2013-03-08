@@ -2,11 +2,18 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.applh.smart-grid"
+<<<<<<< HEAD
         version   = "1.3">
+=======
+        version   = "1.4">
+>>>>>>> v1.4 / Add jquery mobile
     <name>Card Grid</name>
 
     <description>
-Smart Card Grid will offer several games. // Battle Cards Challenge (2 players) //
+Smart Card Grid will offer several games. 
+
+// Battle Cards Challenge (2 players) //
+
     </description>
 
     <author href="http://Applh.com" email="ipad@applh.com">
