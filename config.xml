@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.applh.smart-grid"
-        version   = "1.4">
+        version   = "1.5">
     <name>Card Grid</name>
 
     <description>
@@ -18,7 +18,7 @@ Smart Card Grid will offer several games.
 
    <preference name="permissions" value="none"/>
 
-    <preference name="phonegap-version" value="2.2.0" />
+    <preference name="phonegap-version" value="2.5.0" />
     <preference name="orientation"      value="landscape" />
     <preference name="target-device"    value="tablet" />
     <preference name="fullscreen"       value="false" />
