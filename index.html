@@ -553,7 +553,8 @@ PlayCB.message=function() {
 
 };
 
-PlayCB.act_click1=function(){
+PlayCB.act_click1=function(event){
+   event.preventDefault();
 
   if (PlayCB.curmode=='end') {
      PlayCB.reset_game();
@@ -586,7 +587,8 @@ PlayCB.act_click1=function(){
   }
 };
 
-PlayCB.act_click2=function(){
+PlayCB.act_click2=function(event){
+   event.preventDefault();
   if (PlayCB.curmode=='end') {
      PlayCB.reset_game();
      return;
