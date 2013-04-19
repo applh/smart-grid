@@ -148,6 +148,52 @@ color:#000000;
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="jquery-mobile.js"></script>
 
+   <script type="text/javascript" src="phonegap.js"></script>
+ 
+<script>
+var BB={};
+
+BB.media2sound=[];
+
+BB.media2success=function() {
+};
+
+BB.media2error=function(error) {
+};
+
+// Cordova is ready
+BB.device2ready=function() {
+   BB.media2sound["ace"] = new Media("media/ace-opens-four-cards-challenge.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["king"] = new Media("media/king-opens-three-cards-challenge.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["queen"] = new Media("media/queen-opens-two-cards-challenge.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["jack"] = new Media("media/jack-opens-one-card-challenge.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["ten"] = new Media("media/ten.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["nine"] = new Media("media/nine.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["eight"] = new Media("media/eight.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["seven"] = new Media("media/seven.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["six"] = new Media("media/six.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["five"] = new Media("media/five.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["four"] = new Media("media/four.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["three"] = new Media("media/three.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["two"] = new Media("media/two.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["battle"] = new Media("media/battle-battle.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["player-one-wins"] = new Media("media/player-one-wins.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["player-two-wins"] = new Media("media/player-two-wins.mp3", BB.media2success, BB.media2error);
+   
+};
+
+
+BB.media2play=function (sound) {
+   if (sound && (BB.media2sound[sound] != null)) {
+      BB.media2sound[sound].play();
+   }
+};
+
+// Wait for Cordova to load
+document.addEventListener("deviceready", BB.device2ready, false);
+
+
+</script>
 </head>
 <body class="applh">
 <div class="page" data-role="page">
@@ -381,6 +427,19 @@ PlayCB.change_player=function() {
             PlayCB.start_chain=curXl;
             PlayCB.start_card=lastX;
          }
+
+         if (lastX == 'J') {
+            BB.media2play("jack");
+         }
+         else if (lastX == 'Q') {
+            BB.media2play("queen");
+         }
+         else if (lastX == 'K') {
+            BB.media2play("queen");
+         }
+         else if (lastX == 'A') {
+            BB.media2play("ace");
+         }
       }
    }
    
@@ -440,6 +499,8 @@ PlayCB.check=function(){
 
       var d = new Date();
       PlayCB.fstart = d.getTime();
+
+      BB.media2play("battle");
    }
    else {
       var change_turn=PlayCB.change_player();
@@ -469,12 +530,16 @@ PlayCB.check=function(){
       PlayCB.texto='* PLAYER 2 WINS * (click to restart)';
       PlayCB.message();
       PlayCB.curmode='end';
+
+      BB.media2play("player-one-wins");
    }
    if (PlayCB.cards2.length == 0) {
       //alert("PLAYER 1 WINS");
       PlayCB.texto='* PLAYER 1 WINS * (click to restart)';
       PlayCB.message();
       PlayCB.curmode='end';
+
+      BB.media2play("player-two-wins");
    }
 };
 
@@ -622,7 +687,7 @@ PlayCB.act_click2=function(event){
 PlayCB.winner=null;
 PlayCB.reset_game=function() {
 
-   PlayCB.texto='* BATTLE CARDS / v1.4 / by Applh.com *';
+   PlayCB.texto='* BATTLE CARDS / v1.5 / by Applh.com *';
    PlayCB.message();
   
    PlayCB.click1=0;

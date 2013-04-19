@@ -16,6 +16,8 @@ Smart Card Grid will offer several games.
         Applh.com
     </author>
 
+   <feature name="http://api.phonegap.com/1.0/media"/>
+
    <preference name="permissions" value="none"/>
 
     <preference name="phonegap-version" value="2.5.0" />
@@ -24,6 +26,9 @@ Smart Card Grid will offer several games.
     <preference name="fullscreen"       value="false" />
     <preference name="webviewbounce"    value="false" />    
     <preference name="exit-on-suspend"  value="true" />
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-minSdkVersion"      value="7" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    
 
     <icon src="icon.png" />
     <icon src="icon-57.png"            gap:platform="ios"        width="57"   height="57" />
