@@ -515,20 +515,20 @@ PlayCB.check=function(){
          PlayCB.curmode='battle';
          if (PlayCB.curplay == 1) {
             PlayCB.winner = 2;
+            BB.media2play("player-two");
          }
          else if (PlayCB.curplay == 2) {
             PlayCB.winner = 1;
+            BB.media2play("player-one");
          }
          PlayCB.check_winner();
       }
       else if (change_turn || (PlayCB.start_chain == 0)) {
          if (PlayCB.curplay == 1) {
             PlayCB.curplay = 2;
-            BB.media2play("player-two");
          }
          else if (PlayCB.curplay == 2) {
             PlayCB.curplay = 1;
-            BB.media2play("player-one");
          }
       }
 
