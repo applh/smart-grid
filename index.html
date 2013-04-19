@@ -177,6 +177,8 @@ BB.device2ready=function() {
    BB.media2sound["three"] = new Media("media/three.mp3", BB.media2success, BB.media2error);
    BB.media2sound["two"] = new Media("media/two.mp3", BB.media2success, BB.media2error);
    BB.media2sound["battle"] = new Media("media/battle-battle.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["player-one"] = new Media("media/player-one.mp3", BB.media2success, BB.media2error);
+   BB.media2sound["player-two"] = new Media("media/player-two.mp3", BB.media2success, BB.media2error);
    BB.media2sound["player-one-wins"] = new Media("media/player-one-wins.mp3", BB.media2success, BB.media2error);
    BB.media2sound["player-two-wins"] = new Media("media/player-two-wins.mp3", BB.media2success, BB.media2error);
    
@@ -535,16 +537,12 @@ PlayCB.check=function(){
       PlayCB.texto='* PLAYER 2 WINS * (click to restart)';
       PlayCB.message();
       PlayCB.curmode='end';
-
-      BB.media2play("player-one-wins");
    }
    if (PlayCB.cards2.length == 0) {
       //alert("PLAYER 1 WINS");
       PlayCB.texto='* PLAYER 1 WINS * (click to restart)';
       PlayCB.message();
       PlayCB.curmode='end';
-
-      BB.media2play("player-two-wins");
    }
 };
 
@@ -561,17 +559,24 @@ PlayCB.reset_turn=function(){
       PlayCB.card1='';
       PlayCB.card11='';
       jQuery(".hand1 .cards").html(PlayCB.cards1.join());
-//      jQuery('.card1').html(PlayCB.card1);
 
       PlayCB.card2='';
       PlayCB.card22='';
       jQuery(".hand2 .cards").html(PlayCB.cards2.join());
-//      jQuery('.card2').html(PlayCB.card2);
+
    if (PlayCB.winner == 1) {     
-    jQuery('.card-on:last').html('<span style="color:#00FFFF;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('<span style="color:#00FFFF;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+      BB.media2play("player-one-wins");
    }
    else if (PlayCB.winner == 2) {     
-    jQuery('.card-on:last').html('<span style="color:#FFFF00;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+      jQuery('.card-on:last').html('<span style="color:#FFFF00;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
+      BB.media2play("player-two-wins");
+   }
+   else if (PlayCB.curplay == 1) {
+      BB.media2play("player-one");
+   }
+   else if (PlayCB.curplay == 1) {
+      BB.media2play("player-two");
    }
 
 
