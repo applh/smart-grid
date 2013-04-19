@@ -755,8 +755,8 @@ PlayCB.act_toggle_cards=function(){
 PlayCB.init=function() {
    PlayCB.reset_game();
    
-   jQuery(".play1 td").tap(PlayCB.act_click1);
-   jQuery(".play2 td").tap(PlayCB.act_click2);
+   jQuery(".play1 td").on("vmouseover", PlayCB.act_click1);
+   jQuery(".play2 td").on("vmouseover", PlayCB.act_click2);
    jQuery(".menu1").tap(PlayCB.act_menu1);
    jQuery(".act_restart").tap(PlayCB.act_restart);
    jQuery(".act_toggle_cards").tap(PlayCB.act_toggle_cards);
