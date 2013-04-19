@@ -583,6 +583,8 @@ PlayCB.reset_turn=function(){
 PlayCB.texto='';
 PlayCB.check_winner=function(){
    if (PlayCB.curmode == 'battle') {
+
+      PlayCB.curmode="wait";
       
       var textdelay = '';
       if (PlayCB.fstart > 0) {
@@ -595,7 +597,6 @@ PlayCB.check_winner=function(){
          PlayCB.fend = 0;
       }
 
-      //alert("WINNER [" + PlayCB.winner + "]\n"+ PlayCB.cardsX.join());
       var ts = PlayCB.click1 + PlayCB.click2;
       PlayCB.texto = '#'+ ts + textdelay + ' * Player ' + PlayCB.winner + " WINS "+ PlayCB.cardsX.join() + '';
       
@@ -639,6 +640,8 @@ PlayCB.act_click1=function(event){
     if (curt == "#") {
        PlayCB.winner=1;
        PlayCB.check_winner();
+
+       BB.media2play("player-one");
     }
   }
   
@@ -672,6 +675,8 @@ PlayCB.act_click2=function(event){
     if (curt == "#") {
        PlayCB.winner=2;
        PlayCB.check_winner();
+
+       BB.media2play("player-two");
     }
   }
   if (PlayCB.curmode=='play') {
