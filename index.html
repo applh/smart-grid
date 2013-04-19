@@ -524,9 +524,11 @@ PlayCB.check=function(){
       else if (change_turn || (PlayCB.start_chain == 0)) {
          if (PlayCB.curplay == 1) {
             PlayCB.curplay = 2;
+            BB.media2play("player-two");
          }
          else if (PlayCB.curplay == 2) {
             PlayCB.curplay = 1;
+            BB.media2play("player-one");
          }
       }
 
@@ -570,11 +572,9 @@ PlayCB.reset_turn=function(){
 
    if (PlayCB.winner == 1) {     
       jQuery('.card-on:last').html('<span style="color:#00FFFF;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
-      BB.media2play("player-one");
    }
    else if (PlayCB.winner == 2) {     
       jQuery('.card-on:last').html('<span style="color:#FFFF00;">*'+PlayCB.winner+'*</span>').detach().insertBefore('.card-on:first');
-      BB.media2play("player-two");
    }
 
 
