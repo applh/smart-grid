@@ -535,20 +535,18 @@ PlayCB.check=function(){
    }
    
    if (PlayCB.cards1.length == 0) {
-      //alert("PLAYER 2 WINS");
       PlayCB.texto='* PLAYER 2 WINS * (click to restart)';
       PlayCB.message();
       PlayCB.curmode='end';
 
-      BB.media2play("player-one-wins");
+      BB.media2play("player-two-wins");
    }
    if (PlayCB.cards2.length == 0) {
-      //alert("PLAYER 1 WINS");
       PlayCB.texto='* PLAYER 1 WINS * (click to restart)';
       PlayCB.message();
       PlayCB.curmode='end';
 
-      BB.media2play("player-two-wins");
+      BB.media2play("player-one-wins");
    }
 };
 
