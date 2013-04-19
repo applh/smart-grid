@@ -182,10 +182,15 @@ BB.device2ready=function() {
    
 };
 
+BB.media2playing=null;
 
 BB.media2play=function (sound) {
    if (sound && (BB.media2sound[sound] != null)) {
+      if (BB.media2playing != null) {
+         BB.media2playing.stop();
+      }
       BB.media2sound[sound].play();
+      BB.media2playing=BB.media2sound[sound];
    }
 };
 
@@ -435,7 +440,7 @@ PlayCB.change_player=function() {
             BB.media2play("queen");
          }
          else if (lastX == 'K') {
-            BB.media2play("queen");
+            BB.media2play("king");
          }
          else if (lastX == 'A') {
             BB.media2play("ace");
